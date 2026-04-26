@@ -1,0 +1,13 @@
+.section {
+  padding-block: var(--section-py);
+}
+
+/* ── BACKGROUNDS ──────────────────────────────────────────────── */
+
+.section--bg-default  { background: var(--color-bg); }
+.section--bg-alt      { background: var(--color-bg-alt); }
+.section--bg-warm     { background: var(--color-bg-section); }
+.section--bg-green    { background: var(--color-bg-green-soft); }
+.section--bg-dark     { background: var(--color-bg-dark); }
+.section--bg-white    { background: var(--white); }
+.section--bg-cream    { background: var(--cream); }

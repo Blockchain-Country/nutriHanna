@@ -1,0 +1,43 @@
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.divider--subtle  { background: var(--color-border-subtle); }
+.divider--dark    { background: var(--graphite-200); }
+.divider--ornamental {
+  background: none;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+}
+.divider--ornamental::before,
+.divider--ornamental::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.divider--labeled {
+  background: none;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+}
+.divider--labeled::before,
+.divider--labeled::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.divider__label {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+}

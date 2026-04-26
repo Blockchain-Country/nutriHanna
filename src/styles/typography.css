@@ -1,0 +1,52 @@
+/* ================================================================
+   TYPOGRAPHY SYSTEM
+   ================================================================ */
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--fw-regular);
+  color: var(--color-text-primary);
+  background-color: var(--color-bg);
+}
+
+/* ── SEMANTIC SECTION LABELS ──────────────────────────────────── */
+
+.overline {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: var(--text-4xl);
+  font-weight: var(--fw-light);
+  letter-spacing: var(--ls-tight);
+  color: var(--color-text-primary);
+  line-height: var(--lh-tight);
+}
+
+.section-subtitle {
+  font-size: var(--text-lg);
+  line-height: var(--lh-loose);
+  color: var(--color-text-secondary);
+}
+
+/* ── RESPONSIVE HEADINGS ──────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: var(--text-3xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: var(--text-2xl);
+  }
+}

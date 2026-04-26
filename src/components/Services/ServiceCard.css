@@ -1,0 +1,108 @@
+.service-card {
+  position: relative;
+  background: var(--white);
+  border-radius: var(--r-xl);
+  padding: var(--sp-8);
+  border: 1.5px solid var(--color-border-subtle);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  transition: transform var(--t-normal), box-shadow var(--t-normal);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* ── POPULAR ────────────────────────────────────────────────────── */
+
+.service-card--popular {
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 32px rgba(139, 99, 71, 0.14);
+}
+
+.service-card__popular-label {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-primary);
+  color: var(--white);
+  font-size: var(--text-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  padding: var(--sp-1) var(--sp-4);
+  border-radius: var(--r-full);
+  white-space: nowrap;
+}
+
+/* ── CONTENT ────────────────────────────────────────────────────── */
+
+.service-card__icon {
+  font-size: var(--text-3xl);
+  line-height: 1;
+}
+
+.service-card__meta {
+  display: flex;
+  gap: var(--sp-2);
+}
+
+.service-card__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-primary);
+}
+
+.service-card__desc {
+  font-size: var(--text-sm);
+  line-height: var(--lh-loose);
+  color: var(--color-text-secondary);
+  flex: 1;
+}
+
+/* ── FEATURES ───────────────────────────────────────────────────── */
+
+.service-card__features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  padding-top: var(--sp-2);
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.service-card__feature {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  font-size: var(--text-sm);
+  color: var(--color-text-primary);
+}
+
+.service-card__check {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+/* ── FOOTER ─────────────────────────────────────────────────────── */
+
+.service-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  padding-top: var(--sp-4);
+  border-top: 1px solid var(--color-border-subtle);
+  margin-top: auto;
+}
+
+.service-card__price {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: var(--fw-medium);
+  color: var(--color-primary);
+}

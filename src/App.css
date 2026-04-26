@@ -1,0 +1,38 @@
+@import './styles/variables.css';
+@import './styles/reset.css';
+@import './styles/typography.css';
+@import './styles/animations.css';
+
+/* ── APP SHELL ────────────────────────────────────────────────── */
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.app__main {
+  flex: 1;
+}
+
+/* ── FOCUS ────────────────────────────────────────────────────── */
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: var(--r-sm);
+}
+
+/* ── SELECTION ────────────────────────────────────────────────── */
+
+::selection {
+  background-color: var(--brown-200);
+  color: var(--graphite-700);
+}
+
+/* ── SCROLLBAR ────────────────────────────────────────────────── */
+
+::-webkit-scrollbar            { width: 5px; }
+::-webkit-scrollbar-track      { background: var(--cream); }
+::-webkit-scrollbar-thumb      { background: var(--brown-300); border-radius: var(--r-full); }
+::-webkit-scrollbar-thumb:hover { background: var(--brown-400); }

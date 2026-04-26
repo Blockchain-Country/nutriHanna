@@ -1,0 +1,64 @@
+.benefits__header {
+  text-align: center;
+  margin-bottom: var(--sp-16);
+}
+
+.benefits__header .section-title em {
+  font-style: italic;
+  color: var(--color-accent);
+}
+
+.benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-6);
+}
+
+/* ── CARD ───────────────────────────────────────────────────────── */
+
+.benefits__card {
+  background: var(--white);
+  border-radius: var(--r-xl);
+  padding: var(--sp-8);
+  border: 1px solid var(--color-border-green);
+  transition: transform var(--t-normal), box-shadow var(--t-normal);
+}
+
+.benefits__card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.benefits__icon {
+  font-size: var(--text-3xl);
+  margin-bottom: var(--sp-5);
+  line-height: 1;
+}
+
+.benefits__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-primary);
+  margin-bottom: var(--sp-3);
+}
+
+.benefits__desc {
+  font-size: var(--text-sm);
+  line-height: var(--lh-loose);
+  color: var(--color-text-secondary);
+}
+
+/* ── RESPONSIVE ─────────────────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .benefits__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .benefits__grid {
+    grid-template-columns: 1fr;
+  }
+}

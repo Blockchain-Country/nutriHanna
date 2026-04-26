@@ -1,0 +1,13 @@
+.faq__header {
+  text-align: center;
+  margin-bottom: var(--sp-12);
+}
+
+.faq__header .section-title em {
+  font-style: italic;
+  color: var(--color-primary);
+}
+
+.faq__list {
+  border-top: 1px solid var(--color-border-subtle);
+}
