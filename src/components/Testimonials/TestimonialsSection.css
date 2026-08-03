@@ -14,6 +14,7 @@
 .testimonials__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  align-items: start;
   gap: var(--sp-5);
 }
 
