@@ -38,3 +38,6 @@ yarn-error.log*
 # Claude Code / agent tooling
 .agents/
 skills-lock.json
+
+# Local Netlify folder
+.netlify
