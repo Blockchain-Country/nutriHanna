@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import Button from '@components/ui/Button/Button'
 import Badge from '@components/ui/Badge/Badge'
 import { scrollToSection } from '@utils/helpers'
-import heroDish from '@assets/hero-dish.png'
+import heroDish from '@assets/hero-dish.jpg'
 import './HeroSection.css'
 
 const MARQUEE_ITEMS = [

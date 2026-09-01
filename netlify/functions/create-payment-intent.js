@@ -8,10 +8,10 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
 // Amounts are authoritative here — client sends only packageId.
 // This prevents any price manipulation from the browser.
 const PACKAGES = {
-  consultation: { amount: 150000, currency: 'uah', name: 'Індивідуальна консультація' },
-  plan:         { amount: 350000, currency: 'uah', name: 'Персональний план харчування' },
-  program:      { amount: 900000, currency: 'uah', name: 'Програма супроводу' },
-  course:       { amount: 200000, currency: 'uah', name: 'Груповий курс' },
+  consultation: { amount: 7500,  currency: 'usd', name: 'Индивидуальная консультация' },
+  plan:         { amount: 20000, currency: 'usd', name: 'Онлайн-сопровождение (30 дней)' },
+  program:      { amount: 45000, currency: 'usd', name: 'Сопровождение (3 месяца)' },
+  course:       { amount: 20000, currency: 'usd', name: 'Групповой курс' },
 }
 
 const json = (statusCode, body) => ({
@@ -48,6 +48,6 @@ export const handler = async (event) => {
     return json(200, { clientSecret: intent.client_secret })
   } catch (err) {
     console.error('[create-payment-intent]', err.message)
-    return json(500, { error: 'Не вдалося ініціалізувати платіж. Спробуйте ще раз.' })
+    return json(500, { error: 'Не удалось инициализировать платёж. Попробуйте ещё раз.' })
   }
 }

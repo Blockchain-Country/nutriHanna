@@ -22,9 +22,9 @@ const COUNTRY_TO_LOCALE = {
 
 const formatPrice = (service) => {
   if (!service?.amount) return service?.price ?? ''
-  return new Intl.NumberFormat('uk-UA', {
+  return new Intl.NumberFormat('en-US', {
     style:                 'currency',
-    currency:              'UAH',
+    currency:              'USD',
     maximumFractionDigits: 0,
   }).format(service.amount / 100)
 }
@@ -64,7 +64,7 @@ const PaymentForm = ({ service, onSuccess, onError }) => {
     })
 
     if (error) {
-      const msg = error.message ?? 'Сталася помилка. Спробуйте ще раз.'
+      const msg = error.message ?? 'Произошла ошибка. Попробуйте ещё раз.'
       setLocalError(msg)
       onError?.(msg)
       setProcessing(false)
@@ -106,7 +106,7 @@ const PaymentForm = ({ service, onSuccess, onError }) => {
         loading={processing}
         disabled={!stripe || !elements || processing}
       >
-        {processing ? 'Обробка платежу…' : `Сплатити ${formatPrice(service)}`}
+        {processing ? 'Обработка платежа…' : `Оплатить ${formatPrice(service)}`}
       </Button>
 
       <p className="payment-form__secure">
@@ -114,7 +114,7 @@ const PaymentForm = ({ service, onSuccess, onError }) => {
           <rect x="0.75" y="5.25" width="9.5" height="7.25" rx="1.5" stroke="currentColor" strokeWidth="1.25" />
           <path d="M3 5.25V3.5a2.5 2.5 0 0 1 5 0v1.75" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" />
         </svg>
-        Захищено Stripe · дані карти не зберігаються
+        Защищено Stripe · данные карты не сохраняются
       </p>
     </form>
   )

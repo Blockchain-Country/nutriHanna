@@ -8,7 +8,7 @@ export const TESTIMONIALS = [
         initials: 'АК',
     },
     {
-        id: 3,
+        id: 2,
         name: 'Марина Т.',
         role: 'Избавилась от вздутия и усталости',
         rating: 5,
@@ -16,7 +16,7 @@ export const TESTIMONIALS = [
         initials: 'МТ',
     },
     {
-        id: 4,
+        id: 3,
         name: 'Ольга С.',
         role: 'Восстановила энергию',
         rating: 5,
@@ -24,7 +24,7 @@ export const TESTIMONIALS = [
         initials: 'ОС',
     },
     {
-        id: 5,
+        id: 4,
         name: 'Сергей М.',
         role: 'Набрал мышечную массу',
         rating: 5,

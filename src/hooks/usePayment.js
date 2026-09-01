@@ -22,7 +22,7 @@ const usePayment = () => {
 
       const data = await res.json().catch(() => ({}))
 
-      if (!res.ok) throw new Error(data.error ?? 'Помилка ініціалізації платежу')
+      if (!res.ok) throw new Error(data.error ?? 'Ошибка инициализации платежа')
 
       setClientSecret(data.clientSecret)
       setStatus('ready')
