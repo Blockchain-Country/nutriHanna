@@ -30,12 +30,12 @@ const Header = ({ onBookingOpen }) => {
     <>
       <header className={`header${isScrolled ? ' header--scrolled' : ''}`} role="banner">
         <div className="header__inner">
-          <a href="/" className="header__logo" aria-label="Hanna Nutrition — на головну">
+          <a href="/" className="header__logo" aria-label="Hanna Nutrition — на главную">
             <span className="header__logo-name">Hanna</span>
             <span className="header__logo-sub">Nutrition</span>
           </a>
 
-          <nav className="header__nav" aria-label="Основна навігація">
+          <nav className="header__nav" aria-label="Основная навигация">
             {NAV_LINKS.map(({ label, href }) => (
               <button
                 key={href}
@@ -49,7 +49,7 @@ const Header = ({ onBookingOpen }) => {
 
           <div className="header__cta">
             <Button size="sm" onClick={onBookingOpen}>
-              Записатися
+              Записаться
             </Button>
           </div>
 
@@ -57,7 +57,7 @@ const Header = ({ onBookingOpen }) => {
             className={`header__burger${isMobileOpen ? ' header__burger--open' : ''}`}
             onClick={() => setIsMobileOpen((prev) => !prev)}
             aria-expanded={isMobileOpen}
-            aria-label={isMobileOpen ? 'Закрити меню' : 'Відкрити меню'}
+            aria-label={isMobileOpen ? 'Закрыть меню' : 'Открыть меню'}
           >
             <span />
             <span />
@@ -67,7 +67,7 @@ const Header = ({ onBookingOpen }) => {
       </header>
 
       {isMobileOpen && (
-        <div className="header__mobile" role="dialog" aria-modal="true" aria-label="Мобільне меню">
+        <div className="header__mobile" role="dialog" aria-modal="true" aria-label="Мобильное меню">
           <div className="header__mobile-topbar">
             <div className="header__mobile-logo" aria-hidden="true">
               <span className="header__mobile-logo-name">Hanna</span>
@@ -77,7 +77,7 @@ const Header = ({ onBookingOpen }) => {
             <button
               className="header__mobile-close"
               onClick={() => setIsMobileOpen(false)}
-              aria-label="Закрити меню"
+              aria-label="Закрыть меню"
             >
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
                 <path d="M4 4l12 12M16 4L4 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
@@ -102,7 +102,7 @@ const Header = ({ onBookingOpen }) => {
                   onBookingOpen?.()
                 }}
               >
-                Записатися на консультацію
+                Записаться на консультацию
               </Button>
             </div>
           </div>

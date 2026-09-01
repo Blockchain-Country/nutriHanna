@@ -13,7 +13,7 @@ const BenefitsSection = () => (
 
       <div className="benefits__grid">
         {BENEFITS.map(({ icon, title, description }, i) => (
-          <div key={title} className="benefits__card">
+          <div key={i} className="benefits__card">
             <span className="benefits__number" aria-hidden="true">
               {String(i + 1).padStart(2, '0')}
             </span>

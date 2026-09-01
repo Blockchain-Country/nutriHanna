@@ -6,6 +6,7 @@ import './ServiceCard.css'
 
 const ServiceCard = ({ service, onPaymentOpen }) => {
   const { icon, title, description, features, price, duration, popular } = service
+  const isAvailable = price !== 'coming soon'
   const [expanded, setExpanded] = useState(false)
   const [isClamped, setIsClamped] = useState(false)
   const featuresRef = useRef(null)
@@ -46,8 +47,8 @@ const ServiceCard = ({ service, onPaymentOpen }) => {
         className={cn('service-card__features-wrap', expanded && 'service-card__features-wrap--expanded')}
       >
         <ul className="service-card__features">
-          {features.map(feature => (
-            <li key={feature} className="service-card__feature">
+          {features.map((feature, i) => (
+            <li key={i} className="service-card__feature">
               <svg className="service-card__check" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                 <path d="M2.5 7.5L5.5 10.5L11.5 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
@@ -73,13 +74,14 @@ const ServiceCard = ({ service, onPaymentOpen }) => {
       </div>
 
       <div className="service-card__footer">
-        <span className="service-card__price">{price}</span>
+        <span className="service-card__price">{isAvailable ? price : 'Скоро'}</span>
         <Button
           variant={popular ? 'primary' : 'outline'}
           size="sm"
+          disabled={!isAvailable}
           onClick={() => onPaymentOpen?.(service)}
         >
-          Pay
+          Оплатить
         </Button>
       </div>
     </article>

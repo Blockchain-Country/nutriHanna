@@ -154,7 +154,7 @@ const PaymentModal = ({ isOpen, onClose, service }) => {
               options={{
                 clientSecret,
                 appearance: STRIPE_APPEARANCE,
-                locale: 'uk',
+                locale: 'ru',
               }}
             >
               <PaymentForm
